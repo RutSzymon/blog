@@ -7,5 +7,12 @@
   <% @article.comments.each do |comment| %>
     <p><%= comment.body %></p>
   <% end %>
+
+  <%= form_for [@article, Comment.new] do |f| %>
+    <%= f.text_area :body, :rows => 5 %>
+    <%= f.submit %>
+  <% end %>
+
+
 </article>
 <p><%= link_to "Powrót", articles_path , :class => "btn btn-primary" %></p>
