@@ -1,4 +1,7 @@
 <% @articles.each do |article| %>
-<%= article.title %><br><br>
-<%= article.summary %><br><br><br><br>
+  <article>
+    <p><strong><%= article.title %></strong></p>
+    <p><%= article.summary %></p>
+    <p><%= link_to "zobacz artykuł", article_path(article) %></p>
+  </article>
 <% end %>
