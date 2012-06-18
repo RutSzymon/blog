@@ -23,6 +23,7 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem "turn"
+  gem "minitest"
 end
 
 gem 'jquery-rails'
