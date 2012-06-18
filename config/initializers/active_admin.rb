@@ -127,3 +127,9 @@ ActiveAdmin.setup do |config|
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
 end
+
+module ActiveAdmin
+  class BaseController
+    with_role :admin
+  end
+end

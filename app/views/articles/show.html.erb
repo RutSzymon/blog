@@ -3,4 +3,9 @@
   <p><%= @article.summary %></p>
   <p><%= simple_format @article.body %></p>
 </article>
+<article>
+  <% @article.comments.each do |comment| %>
+    <p><%= comment.body %></p>
+  <% end %>
+</article>
 <p><%= link_to "Powrót", articles_path , :class => "btn btn-primary" %></p>
