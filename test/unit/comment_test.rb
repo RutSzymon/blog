@@ -1,7 +1,22 @@
 require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  setup do
+    @comment = FactoryGirl.build(:comment)
+  end
+
+  test "it should save valid object" do
+    assert @comment.save
+  end
+
+  test "it shouldn't save without body" do
+    @comment.body = ""
+    assert @comment.invalid?
+  end
+
+  test "it shouldn't save without article" do
+    @comment.article = nil
+    assert @comment.invalid?
+  end
+
 end
