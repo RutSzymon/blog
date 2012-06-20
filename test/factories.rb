@@ -7,5 +7,11 @@ FactoryGirl.define do
   factory :comment do
     body "text"
     article factory: :article
+    user factory: :user
+  end
+  factory :user do
+    email "factory@factory.com"
+    password "factory"
+    password_confirmation "factory"
   end
 end
