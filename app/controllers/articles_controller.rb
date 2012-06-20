@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def top
-    @articles = Article.order(params[:id])
+    @articles = Article.top(10)
+    #order("comments_count DESC").limit(10)
   end
 end
