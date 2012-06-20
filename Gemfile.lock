@@ -173,6 +173,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   jquery-rails
+  kaminari
   minitest
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
