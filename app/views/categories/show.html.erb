@@ -1,6 +1,6 @@
-<%= @category.title %>
+<p><ctitle><%= @category.title %>
 
-<%= @category.articles.count %>
+<%= "(#{@category.articles.count})" %></ctitle><p>
 
 <% @category.articles.each do |article| %>
 <article>

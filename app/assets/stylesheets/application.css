@@ -11,6 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
 article{
   margin-bottom: 30px;
 }
+
+ctitle { font-size: x-large;
+         font-weight: bold;
+         text-shadow: 3px 3px 5px grey; }
