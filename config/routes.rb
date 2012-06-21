@@ -11,7 +11,7 @@ Blog::Application.routes.draw do
       resources :comments, only: [:create]
     end
   end
-  resources :articles, only: [] do
+  resources :articles, only: [:index, :show] do
     collection do
       get :top
     end

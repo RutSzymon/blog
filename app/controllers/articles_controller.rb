@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    session[:last_product_page] = request.env['HTTP_REFERER'] || articles_path
   end
 
   def top

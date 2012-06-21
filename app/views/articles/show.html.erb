@@ -14,7 +14,8 @@
     <%= f.submit %>
   <% end %>
 <% end %>
-
-
 </article>
-<p><%= link_to "Powrót", articles_path , :class => "btn btn-primary" %></p>
+
+<% if session[:last_product_page] %>
+  <%= link_to "Powrót", session[:last_product_page], :class => "btn btn-primary" %>
+<% end %>
