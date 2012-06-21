@@ -2,7 +2,7 @@ class Article < ActiveRecord::Base
   belongs_to :category
   has_many :comments
 
-  attr_accessible :body, :summary, :title
+  attr_accessible :body, :summary, :title, :category_id
 
   validates :title, presence: true
   validates :summary, presence: true

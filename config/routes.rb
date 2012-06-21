@@ -8,10 +8,12 @@ Blog::Application.routes.draw do
   resources :pages, only: [:show]
   resources :categories do
     resources :articles, only: [:index, :show] do
-      collection do
-        get :top
-      end
       resources :comments, only: [:create]
+    end
+  end
+  resources :articles, only: [] do
+    collection do
+      get :top
     end
   end  
   root to: "articles#index"
