@@ -18,4 +18,14 @@ class TagTest < ActiveSupport::TestCase
     @article = FactoryGirl.create(:article, tags: [@tag])
     assert_equal [@article], @tag.articles
   end
+
+  test "it should save tags" do
+    @tag_1 = FactoryGirl.create(:tag)
+    @tag_2 = FactoryGirl.create(:tag)
+
+    @article = FactoryGirl.create(:article, :tags => [@tag_1, @tag_2])
+
+    @article.tags.include?(@tag_1)
+    @article.tags.include?(@tag_2)
+  end
 end
