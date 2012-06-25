@@ -2,25 +2,36 @@ require 'test_helper'
 
 class ArticleTest < ActiveSupport::TestCase
   setup do
-    @note = FactoryGirl.build(:article)
+    @article = FactoryGirl.build(:article)
   end
 
   test "it should save valid object" do
-    assert @note.save
+    assert @article.save
   end
 
   test "it should save without body" do
-    @note.body = ""
-    assert @note.save
+    @article.body = ""
+    assert @article.save
   end
 
   test "it shouldn't save article without title" do
-    @note.title = nil
-    assert @note.invalid?
+    @article.title = nil
+    assert @article.invalid?
   end
 
   test "it shouldn't save article without summary" do
-    @note.summary = nil
-    assert @note.invalid?
+    @article.summary = nil
+    assert @article.invalid?
+  end
+
+  test "it should have many comments" do
+    @comment = FactoryGirl.create(:comment, article: @article)
+    assert_equal [@comment], @article.comments
+  end
+
+  test "it should belong to category" do
+    category = FactoryGirl.create(:category)
+    @article.category = category
+    assert_equal category, @article.category
   end
 end

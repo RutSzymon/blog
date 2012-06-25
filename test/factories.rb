@@ -3,18 +3,21 @@ FactoryGirl.define do
     title "Sample"
     body "text"
     summary "extra"
-    association :category
+    category
   end
+
   factory :comment do
     body "text"
-    article factory: :article
-    user factory: :user
+    article
+    user
   end
+
   factory :user do
     email "factory@factory.com"
     password "factory"
     password_confirmation "factory"
   end
+
   factory :category do
     title "Nazwa"
   end
