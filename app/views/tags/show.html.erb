@@ -1,0 +1,9 @@
+<p><ctitle><%= @tag.title %></ctitle><p>
+
+<% @articles.each do |article| %>
+<article>
+    <p><strong><%= article.title %></strong></p>
+    <p><%= article.summary %></p>
+    <p><%= link_to "zobacz artykuł", category_article_path(article) %></p>
+  </article>
+<% end %>

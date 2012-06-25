@@ -16,6 +16,11 @@ Blog::Application.routes.draw do
     collection do
       get :top
     end
+  end
+  resources :tags do
+    resources :articles, only: [:index, :show] do
+      resources :comments, only: [:create]
+    end
   end  
   root to: "articles#index"
 end

@@ -21,4 +21,8 @@ FactoryGirl.define do
   factory :category do
     title "Nazwa"
   end
+
+  factory :tag do
+    title "Nazwa"
+  end
 end
