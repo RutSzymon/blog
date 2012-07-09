@@ -1,10 +1,10 @@
-<p><div class="ctitle"><%= @tag.title %></div><p>
+<p><div class="ctitle"><%= params[:id] %></div><p>
 
 <% @articles.each do |article| %>
 <article>
     <p><strong><%= article.title %></strong></p>
     <p><%= article.summary %></p>
-    <p><%= link_to "zobacz artykuł", tag_article_path(@tag, article) %></p>
+    <p><%= link_to "zobacz artykuł", tag_article_path(params[:id], article) %></p>
   </article>
 <% end %>
 
