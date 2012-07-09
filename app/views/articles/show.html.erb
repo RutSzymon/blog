@@ -21,6 +21,4 @@
 <% end %>
 </div>
 
-<% if session[:last_product_page] %>
-  <%= link_to "Powrót", session[:last_product_page], :class => "btn btn-primary" %>
-<% end %>
+<%= link_to "Powrót", previous_path(category: @category, tag: @tag), :class => "btn btn-primary" %>

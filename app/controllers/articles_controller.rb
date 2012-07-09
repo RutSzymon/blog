@@ -4,8 +4,10 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:category_id]) if params[:category_id]
+    @tag = Tag.find(params[:tag_id]) if params[:tag_id]
     @article = Article.find(params[:id])
-    session[:last_product_page] = request.env['HTTP_REFERER'] || articles_path
+    #session[:last_product_page] = request.env['HTTP_REFERER'] || articles_path
   end
 
   def top

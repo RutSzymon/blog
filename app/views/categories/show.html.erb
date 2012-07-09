@@ -6,7 +6,7 @@
 <article>
     <p><strong><%= article.title %></strong></p>
     <p><%= article.summary %></p>
-    <p><%= link_to "zobacz artykuł", category_article_path(article) %></p>
+    <p><%= link_to "zobacz artykuł", category_article_path(@category, article) %></p>
   </article>
 <% end %>
 
