@@ -16,6 +16,11 @@
 <% end %>
 </article>
 
+<div class="tags"><% @article.tags.each do |tag| %>
+  <%= link_to tag.title, tag_path(tag) %>
+<% end %>
+</div>
+
 <% if session[:last_product_page] %>
   <%= link_to "Powrót", session[:last_product_page], :class => "btn btn-primary" %>
 <% end %>
