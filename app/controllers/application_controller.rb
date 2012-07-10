@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   before_filter :get_tags
 
   def get_tags
-    @tags ||= Article.tag_counts_on(:tags)
+    @tags_cloud ||= Article.tag_counts_on(:tags)
   end
 end

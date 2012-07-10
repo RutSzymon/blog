@@ -43,8 +43,8 @@
     <div class="row">
       <div class="span9"><%= yield %></div>
       <div class="span3">
-        <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-         <%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
+        <% tag_cloud(@tags_cloud, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+         <%= link_to tag.name, tag_articles_path(tag.name), :class => css_class %>
         <% end %>
       </div>
     </div>
