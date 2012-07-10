@@ -6,7 +6,17 @@ module ArticlesHelper
     elsif options[:tag]
       tag_articles_path(options[:tag])
     else
-      [options[:category, :top], :articles]
+      [options[:category], :articles]
+    end
+  end
+
+  def scoped_article_path(options = {})
+    if options[:tag]
+      tag_article_path(options[:tag], options[:article])
+    elsif options[:category]
+      category_article_path(options[:category], options[:article])
+    else
+      article_path(options[:article])
     end
   end
 end

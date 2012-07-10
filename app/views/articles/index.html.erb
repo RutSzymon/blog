@@ -2,7 +2,7 @@
   <article>
     <p><strong><%= article.title %></strong></p>
     <p><%= article.summary %></p>
-    <p><%= link_to "zobacz artykuł", article_path(article) %></p>
+    <p><%= link_to "zobacz artykuł", scoped_article_path(category: @category, tag: @tag, article: article) %></p>
   </article>
 <% end %>
 <%= paginate @articles %>
