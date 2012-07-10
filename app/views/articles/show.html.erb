@@ -17,9 +17,9 @@
 </article>
 
 <div class="tags">
- <% @article.tag_list.each do |tag| %>
-  <%= link_to tag, tag_path(tag) %>
+  <% @article.tag_list.each do |tag| %>
+    <%= link_to tag, tag_path(tag) %>
 <% end %>
 </div>
 
-<%= link_to "Powrót", previous_path(category: @category, tag: @tag), :class => "btn btn-primary" %>
+<%= link_to "Powrót", previous_path(), :class => "btn btn-primary" %>

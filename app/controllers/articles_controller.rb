@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.page params[:page]
+    #@articles = Article.page params[:page]
+    @articles = Article.with_category(params[:category_id]).with_tag(params[:tag_id]).page(params[:page])
   end
 
   def show

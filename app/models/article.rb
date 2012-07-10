@@ -12,4 +12,20 @@ class Article < ActiveRecord::Base
   paginates_per 10
 
   scope :top, ->(num){ order("comments_count DESC").limit(num) }
+
+  def self.with_category(category)
+    if category
+      where(category_id: category)
+    else
+      scoped
+    end
+  end
+
+  def self.with_tag(tag)
+    if tag
+      where(tag_id: tag)
+    else
+      scoped
+    end
+  end
 end
