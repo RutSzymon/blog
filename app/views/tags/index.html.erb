@@ -1,5 +1,5 @@
 <% all_tags.each do |tag| %>
   <article>
-    <p><strong><%= link_to tag.name, tag_path(tag.name) %></strong></p>
+    <p><strong><%= link_to tag.name, tag_articles_path(tag.name) %></strong></p>
   </article>
 <% end %>

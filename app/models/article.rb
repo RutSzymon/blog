@@ -23,7 +23,7 @@ class Article < ActiveRecord::Base
 
   def self.with_tag(tag)
     if tag
-      where(tag_id: tag)
+      tagged_with(params[:id])
     else
       scoped
     end
