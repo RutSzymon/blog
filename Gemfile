@@ -30,6 +30,10 @@ end
 group :test do
   gem "turn"
   gem "minitest"
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "launchy"
+  gem "database_cleaner"
 end
 
 gem 'jquery-rails'
