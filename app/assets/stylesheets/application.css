@@ -26,7 +26,23 @@ article{
          font-weight: bold;
          text-shadow: 3px 3px 5px grey; }
 
-.css1 { font-size: 1.0em; }
-.css2 { font-size: 1.2em; }
-.css3 { font-size: 1.4em; }
-.css4 { font-size: 1.6em; }
+.css1 { font-size: 1.0em;
+        text-shadow: 3px 3px 5px grey; }
+.css2 { font-size: 1.2em;
+        text-shadow: 3px 3px 5px grey; }
+.css3 { font-size: 1.4em;
+        text-shadow: 3px 3px 5px grey; }
+.css4 { font-size: 1.6em;
+        text-shadow: 3px 3px 5px grey; }
+.css1:hover{
+  color: rgb(25%,75%,75%);
+  text-decoration: none;}
+.css2:hover{
+  color: rgb(25%,75%,75%);
+  text-decoration: none;}
+.css3:hover{
+  color: rgb(25%,75%,75%);
+  text-decoration: none;}
+.css4:hover{
+  color: rgb(25%,75%,75%);
+  text-decoration: none;}
