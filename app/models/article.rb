@@ -8,7 +8,7 @@ class Article < ActiveRecord::Base
 
   validates :title, presence: true
   validates :summary, presence: true
-  
+
   paginates_per 10
 
   scope :top, ->(num){ order("comments_count DESC").limit(num) }

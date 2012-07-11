@@ -3,6 +3,7 @@ FactoryGirl.define do
     sequence(:title){|n| "Tytul #{n}"}
     sequence(:summary){|n| "Wstep #{n}"}
     sequence(:body){|n| "Tresc #{n}"}
+    tag_list "Tresc, Factory"
     category
   end
 
@@ -22,7 +23,4 @@ FactoryGirl.define do
     title "Nazwa"
   end
 
-  factory :tag do
-    title "Nazwa"
-  end
 end

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CategoryTest < ActionDispatch::IntegrationTest
-  
+
   setup do
     FactoryGirl.create(:category)
   end
