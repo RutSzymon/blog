@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :article do
-    title "Sample"
-    body "text"
-    summary "extra"
+    sequence(:title){|n| "Tytul #{n}"}
+    sequence(:summary){|n| "Wstep #{n}"}
+    sequence(:body){|n| "Tresc #{n}"}
     category
   end
 

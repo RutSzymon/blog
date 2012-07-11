@@ -29,9 +29,9 @@ class ArticleTest < ActionDispatch::IntegrationTest
   end
 
   test "it should paginate pages" do
+    20.times{ FactoryGirl.create(:article) }
     visit root_path
-    20.times{|i| FactoryGirl.create(:article, title: "Tytul #{i+2}", summary: "wstep #{i+2}", body: "rozszerzenie #{i+2}") }
-    find("span.last a").click
+    find(".last").click
     assert page.has_content?("wstep")
   end
 end
