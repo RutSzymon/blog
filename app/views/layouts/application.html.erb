@@ -27,7 +27,7 @@
             <li><%= link_to "Categories", categories_path %></li>
             <li><%= link_to "Top 10", top_articles_path %></li>
             <li><%= link_to "Tags", tags_path %></li>
-            <li><%= link_to "Cart" %></li>
+            <li><%= link_to "Profil", user_path(current_user) if current_user %></li>
             <% if current_user %>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
             <% else %>

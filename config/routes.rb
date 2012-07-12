@@ -21,6 +21,7 @@ Blog::Application.routes.draw do
     resources :articles, only: [:index, :show] do
       resources :comments, only: [:create]
     end
-  end  
+  end
+  resources :users, only: [:edit, :show]
   root to: "articles#index"
 end
