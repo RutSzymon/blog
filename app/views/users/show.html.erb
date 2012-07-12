@@ -4,9 +4,13 @@
   <p><%= "Email: #{@user.email}" %></p>
 </article>
 
-<%= "Artykuły użytkownika" %>
+<article>
+<%= "Artykuły użytkownika:" %>
 <% @user.articles.each do |article| %>
   <%= article.title %>
   <%= article.summary %>
   <%= link_to "zobacz artykuł", scoped_article_path(category: @category, tag: @tag, article: article) %>
 <% end %>
+</article>
+
+<%= link_to "Edytuj", edit_user_path, :class => "btn btn-primary" %>
