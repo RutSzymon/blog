@@ -2,6 +2,7 @@ class Article < ActiveRecord::Base
   acts_as_taggable
 
   belongs_to :category
+  belongs_to :user
   has_many :comments
 
   attr_accessible :body, :summary, :title, :category_id, :tag_list, as: :admin
