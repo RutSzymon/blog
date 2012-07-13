@@ -1,0 +1,23 @@
+<%= form_for @article do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.error_message_on :title %>
+
+    <%= f.label :summary %>
+    <%= f.text_field :summary %>
+    <%= f.error_message_on :summary %>
+
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+    <%= f.error_message_on :body %>
+
+    <%= f.label :category_id %>
+    <%= f.select :category_id, @categories, include_blank: true %>
+    <%= f.error_message_on :categories %>
+
+    <%= f.label :tag_list %>
+    <%= f.text_field :tag_list %>
+    <%= f.error_message_on :tag_list %>
+
+    <%= f.submit %>
+<% end %>

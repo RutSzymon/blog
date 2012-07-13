@@ -1,16 +1,26 @@
-<article>
-  <p><%= "Imię: #{@user.name}" %></p>
-  <p><%= "Nazwisko: #{@user.surname}" %></p>
-  <p><%= "Email: #{@user.email}" %></p>
-</article>
+<div class="profil">
+  <%= "Dane użytkownika:" %>
+</div>
+
+
+<p><%= "Imię: #{@user.name}" %></p>
+<p><%= "Nazwisko: #{@user.surname}" %></p>
+<p><%= "Email: #{@user.email}" %></p>
+
 
 <article>
-<%= "Artykuły użytkownika:" %>
+  <%= link_to "Edytuj", edit_user_path, :class => "btn btn-primary" %>
+</article>
+
+<div class="profil">
+  <%= "Artykuły użytkownika:" %>
+</div>
+
 <% @user.articles.each do |article| %>
-  <%= article.title %>
-  <%= article.summary %>
-  <%= link_to "zobacz artykuł", scoped_article_path(category: @category, tag: @tag, article: article) %>
-<% end %>
-</article>
+  <article>  
+    <p><strong><%= article.title %></strong></p>
+    <p><%= article.summary %><p>
+    <p><%= link_to "zobacz artykuł", scoped_article_path(category: @category, tag: @tag, article: article) %></p>
 
-<%= link_to "Edytuj", edit_user_path, :class => "btn btn-primary" %>
+  </article>
+<% end %>

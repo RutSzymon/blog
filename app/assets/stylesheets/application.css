@@ -25,6 +25,11 @@ article{
 .red { color: red;
        margin-bottom: 10px; }
 
+.profil { font-size: large;
+         font-weight: bold;
+         text-shadow: 3px 3px 5px grey;
+         margin-bottom: 10px; }
+
 .ctitle { font-size: x-large;
          font-weight: bold;
          text-shadow: 3px 3px 5px grey; }

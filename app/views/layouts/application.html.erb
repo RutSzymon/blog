@@ -28,6 +28,7 @@
             <li><%= link_to "Top 10", top_articles_path %></li>
             <li><%= link_to "Tags", tags_path %></li>
             <li><%= link_to "Profil", user_path(current_user) if current_user %></li>
+            <li><%= link_to "Add article", new_article_path(params[:id]) if current_user %></li>
             <% if current_user %>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
             <% else %>

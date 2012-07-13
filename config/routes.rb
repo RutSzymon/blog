@@ -7,18 +7,18 @@ Blog::Application.routes.draw do
 
   resources :pages, only: [:show]
   resources :categories do
-    resources :articles, only: [:index, :show] do
+    resources :articles, only: [:index, :create, :new, :show] do
       resources :comments, only: [:create]
     end
   end
-  resources :articles, only: [:index, :show] do
+  resources :articles, only: [:index, :create, :new, :show] do
     resources :comments, only: [:create]
     collection do
       get :top
     end
   end
   resources :tags do
-    resources :articles, only: [:index, :show] do
+    resources :articles, only: [:index, :create, :new, :show] do
       resources :comments, only: [:create]
     end
   end

@@ -6,6 +6,7 @@ class Article < ActiveRecord::Base
   has_many :comments
 
   attr_accessible :body, :summary, :title, :category_id, :tag_list, as: :admin
+  attr_accessible :body, :summary, :title, :tag_list
 
   validates :title, presence: true
   validates :summary, presence: true
