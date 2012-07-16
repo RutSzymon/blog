@@ -19,10 +19,13 @@ article{
 }
 
 .avatar{ float:  left;
-         margin-right: 20px;}
+         margin-right: 20px;
+         margin-bottom: 30px;
+         box-shadow: 5px 5px 10px;}
 
 .thumb{ float:  left;
-        margin-right: 5px;}
+        margin-right: 5px;
+        box-shadow: 2px 2px 5px;}
 
 .comment{ margin-left: 25px; }
 
@@ -36,7 +39,8 @@ article{
 .profil { font-size: large;
          font-weight: bold;
          text-shadow: 3px 3px 5px grey;
-         margin-bottom: 10px; }
+         margin-bottom: 10px;
+         clear: both;}
 
 .ctitle { font-size: x-large;
          font-weight: bold;

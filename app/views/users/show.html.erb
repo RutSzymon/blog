@@ -13,9 +13,7 @@
   <%= link_to "Edytuj", edit_user_path, :class => "btn btn-primary" if current_user.id === @user.id %>
 </article>
 
-<div class="profil">
-  <%= "Artykuły użytkownika:" %>
-</div>
+<div class="profil">Artykuły użytkownika</div>
 
 <% @user.articles.each do |article| %>
   <article>  
