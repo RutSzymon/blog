@@ -7,9 +7,16 @@
 
 <article>
   <% @article.comments.each do |comment| %>
-    <%= link_to comment.user.name_or_email, user_path(comment.user) if comment.user %>
-     napisał:
-    <p><%= simple_format comment.body %></p>
+    <% if comment.user %>
+      <div class="thumb">
+        <%= image_tag comment.user.avatar.url(:thumb) %>
+      </div>
+      <%= link_to comment.user.name_or_email, user_path(comment.user) %>
+      napisał:
+    <% end %>
+    <div class="comment">
+      <p><%= simple_format comment.body %></p>
+    </div>
   <% end %>
 
 <% if current_user %>

@@ -18,6 +18,14 @@ article{
   margin-bottom: 30px;
 }
 
+.avatar{ float:  left;
+         margin-right: 20px;}
+
+.thumb{ float:  left;
+        margin-right: 5px;}
+
+.comment{ margin-left: 25px; }
+
 .tags{
   margin-bottom: 5px;
 }

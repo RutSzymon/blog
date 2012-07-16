@@ -3,7 +3,7 @@ class Comment < ActiveRecord::Base
   belongs_to :user
 
   attr_accessible :body
-  attr_accessible :body, :article_id, as: :admin
+  attr_accessible :body, :article_id, :user_id, as: :admin
 
   validates :body, presence: true
   validates :article, presence: true

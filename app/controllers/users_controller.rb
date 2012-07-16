@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
+    @user.avatar = params[:user].delete(:avatar)
     @user.update_attributes(params[:user])
     respond_with @user
   end

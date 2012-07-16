@@ -1,5 +1,5 @@
 <% if current_user %>
-  <%= form_for @user do |f| %>
+  <%= form_for @user, :html => {:multipart => true} do |f| %>
     <%= f.label :email %>
     <%= f.email_field :email %>
     <div class="red">
@@ -11,6 +11,9 @@
 
     <%= f.label :surname %>
     <%= f.text_field :surname %>
+
+    <%= f.label :avatar %>
+    <p><%= f.file_field :avatar %></p>
     
     <%= f.submit %>
   <% end %>

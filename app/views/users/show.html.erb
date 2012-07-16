@@ -2,11 +2,12 @@
   <%= "Dane użytkownika:" %>
 </div>
 
-
+<article><div class="avatar">
+  <%= image_tag @user.avatar.url %>
+</div>
 <p><%= "Imię: #{@user.name}" %></p>
 <p><%= "Nazwisko: #{@user.surname}" %></p>
-<p><%= "Email: #{@user.email}" %></p>
-
+<p><%= "Email: #{@user.email}" %></p></article>
 
 <article>
   <%= link_to "Edytuj", edit_user_path, :class => "btn btn-primary" if current_user.id === @user.id %>
