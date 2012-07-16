@@ -4,6 +4,7 @@ require 'test_helper'
 class UserTest < ActionDispatch::IntegrationTest
 
   setup do
+    @user = FactoryGirl.create(:user, email: "factory@factory.com")
     FactoryGirl.create(:user)
   end
 

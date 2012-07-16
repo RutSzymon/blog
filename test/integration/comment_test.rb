@@ -2,9 +2,10 @@
 require 'test_helper'
 
 class CommentTest < ActionDispatch::IntegrationTest
-   
+
   setup do
-     FactoryGirl.create(:comment) 
+    @user = FactoryGirl.create(:user, email: "factory@factory.com")
+     FactoryGirl.create(:comment)
   end
 
   test "article should have a comment" do
@@ -19,6 +20,7 @@ class CommentTest < ActionDispatch::IntegrationTest
     fill_in("Email", :with => "factory@factory.com")
     fill_in("Password", :with => "factory")
     click_button("Sign in")
+
     click_link("zobacz artykuł")
     assert page.has_selector?("#new_comment")
   end
