@@ -11,7 +11,7 @@ class ArticleTest < ActionDispatch::IntegrationTest
   test "it should have title and summary" do
     visit root_path
     assert page.has_content?("Tytul 1")
-    assert page.has_content?("Tytul 1")
+    assert page.has_content?("Tytul 2")
     assert page.has_content?("wstep 1")
     assert page.has_content?("wstep 2")
   end

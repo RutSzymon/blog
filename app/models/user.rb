@@ -12,4 +12,12 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :surname, as: :admin
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :surname
   # attr_accessible :title, :body
+
+  def full_name
+    [name, surname].join(" ") if name.present? && surname.present?
+  end
+
+  def name_or_email
+    full_name || email
+  end
 end

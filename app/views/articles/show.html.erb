@@ -1,11 +1,15 @@
 <article>
-  <p><strong><%= @article.title %></strong></p>
+  <p><strong><%= @article.title %>
+    <%= link_to "(#{@article.user.name_or_email})", user_path(@article.user) if @article.user %></strong></p>
   <p><%= @article.summary %></p>
   <p><%= simple_format @article.body %></p>
 </article>
+
 <article>
   <% @article.comments.each do |comment| %>
-    <p><%= comment.body %></p>
+    <%= link_to comment.user.name_or_email, user_path(comment.user) if comment.user %>
+     napisał:
+    <p><%= simple_format comment.body %></p>
   <% end %>
 
 <% if current_user %>
