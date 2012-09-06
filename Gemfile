@@ -42,7 +42,7 @@ end
 gem 'jquery-rails'
 
 group :development do
-  gem "cane" 
+  gem "cane"
 end
 
 # To use ActiveModel has_secure_password

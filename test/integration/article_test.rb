@@ -36,7 +36,7 @@ class ArticleTest < ActionDispatch::IntegrationTest
     assert page.has_content?("wstep")
   end
 
-  test "add article should show a form" do 
+  test "add article should show a form" do
     visit root_path
     click_link("Sign in")
     fill_in("Email", :with => "factory@factory.com")
