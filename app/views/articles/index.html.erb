@@ -1,8 +1,2 @@
-<% @articles.each do |article| %>
-  <article id="article_#{@article.id}">
-    <p><strong><%= article.title %></strong></p>
-    <p><%= article.summary %></p>
-    <p><%= link_to "zobacz artykuł", scoped_article_path(category: @category, tag: @tag, article: article) %></p>
-  </article>
-<% end %>
+<div id="articles" />
 <%= paginate @articles %>
